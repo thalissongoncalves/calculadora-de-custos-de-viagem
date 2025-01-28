@@ -1,5 +1,6 @@
 import { useState, FormEvent } from 'react'
 import logoImg from './assets/logo.jpg'
+import carro from './assets/car.gif'
 import './App.css'
 
 interface InfoProps {
@@ -43,14 +44,12 @@ function App() {
 
   return (
     <>
-      <header>
+      <main className='container'>
         <img 
           className='logoImg'
           src={logoImg} 
           alt='Logotipo de um carro no posto de combustível com um relógio em cima escrito TRAVEL CALCULATOR' 
         />
-      </header>
-      <main>
         <form className='form' onSubmit={calcular}>
           <label>
             Distância (km):
@@ -119,16 +118,17 @@ function App() {
               />
             </label>
           )}
-          <button type='submit'>
+          <button type='submit' className='buttonSubmit'>
             Calcular custo total
           </button>
         </form>
         {info && Object.keys(info).length > 0 && (
-          <section>
+          <section className='cardResultado'>
             <h2>Resumo da Viagem</h2>
             <span>Custo com combustível: {formatarMoeda(info.combustivel)}</span>
             <span>Custo com pedágios: {formatarMoeda(info.pedagio)}</span>
             <span>Custo total: {formatarMoeda(info.total)}</span>
+            <img className='citroen' src={carro} alt="Carro da citroen cinza me movimento 8-bit" />
           </section>
         )}
       </main>

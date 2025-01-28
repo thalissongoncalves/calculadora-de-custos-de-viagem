@@ -1,4 +1,73 @@
 .logoImg {
     border-radius: 20px;
-    width: 150px;
+    max-width: 200px;
+    margin-top: 15px;
+}
+
+.container {
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.form label {
+    color: #FFF;
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+.input {
+    padding: 5px;
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.cardResultado {
+    align-items: center;
+    background-color: #1494D3;
+    border-radius: 10px;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.cardResultado h2 {
+    font-size: 40px;
+}
+
+.cardResultado span {
+    font-size: 20px;
+    padding: 5px 0;
+    font-weight: 600;
+}
+
+.buttonSubmit {
+    margin-top: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #1494D3;
+    height: 40px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.citroen {
+    border-radius: 10px;
+    margin-top: 10px;
 }
