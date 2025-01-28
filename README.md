@@ -35,4 +35,41 @@ A **Calculadora de Custos de Viagem** é uma aplicação React desenvolvida para
 ### Passo a passo:
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/calculadora-de-viagem.git
+   git clone https://github.com/thalissongoncalves/calculadora-de-custos-de-viagem
+
+2. Acesse o diretório do projeto:
+   ```bash
+   cd calculadora-de-custos de viagem
+
+3. Instale as dependências:
+   ```bash
+   npm install
+
+4. Execute a aplicação:
+   ```bash
+   npm run dev
+
+5. Abra o navegador no endereço:
+   ```bash
+   http://localhost:5173
+
+📁 Estrutura do Projeto
+
+calculadora-de-viagem/
+├── public/
+│   └── vite.svg (ícone)
+├── src/
+│   ├── assets/ (imagens e recursos)
+│   ├── components/ (componentes reutilizáveis)
+│   ├── App.tsx (componente principal)
+│   ├── main.tsx (ponto de entrada do React)
+│   └── styles/ (arquivos de estilização)
+├── index.html (estrutura HTML principal)
+├── package.json (configuração do projeto)
+└── README.md (documentação do projeto)
+
+📄 Licença
+Este projeto está sob a licença MIT. Sinta-se à vontade para utilizá-lo e modificá-lo.
+Consulte o arquivo LICENSE para mais informações.
+
+💬 Feedback Ficou com alguma dúvida ou tem sugestões para melhorar este projeto? Entre em contato comigo ou abra uma issue no repositório. Toda contribuição é bem-vinda! 😊
