@@ -55,18 +55,19 @@ A **Calculadora de Custos de Viagem** é uma aplicação React desenvolvida para
 
 📁 Estrutura do Projeto
 
-calculadora-de-viagem/
-├── public/
-│   └── vite.svg (ícone)
-├── src/
-│   ├── assets/ (imagens e recursos)
-│   ├── components/ (componentes reutilizáveis)
-│   ├── App.tsx (componente principal)
-│   ├── main.tsx (ponto de entrada do React)
-│   └── styles/ (arquivos de estilização)
-├── index.html (estrutura HTML principal)
-├── package.json (configuração do projeto)
-└── README.md (documentação do projeto)
+   ```scss
+   calculadora-de-viagem/
+   ├── public/
+   │   └── vite.svg (ícone)
+   ├── src/
+   │   ├── assets/ (imagens e recursos)
+   │   ├── components/ (componentes reutilizáveis)
+   │   ├── App.tsx (componente principal)
+   │   ├── main.tsx (ponto de entrada do React)
+   │   └── styles/ (arquivos de estilização)
+   ├── index.html (estrutura HTML principal)
+   ├── package.json (configuração do projeto)
+   └── README.md (documentação do projeto)
 
 📄 Licença
 Este projeto está sob a licença MIT. Sinta-se à vontade para utilizá-lo e modificá-lo.
