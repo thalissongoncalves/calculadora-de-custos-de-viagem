@@ -44,6 +44,11 @@
     justify-content: center;
     padding: 20px;
     margin-top: 15px;
+    transition: transform 0.8s;
+}
+
+.cardResultado:hover {
+    transform: scale(1.01);
 }
 
 .cardResultado h2 {
