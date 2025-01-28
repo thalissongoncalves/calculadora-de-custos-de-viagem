@@ -1,22 +1,45 @@
-import { useState } from 'react'
+import { useState, FormEvent } from 'react'
 import logoImg from './assets/logo.jpg'
 import './App.css'
 
 interface InfoProps {
-  distancia: number;
-  consumo: number;
   combustivel: number;
   pedagio: number;
-  pedagioValor: number;
-}
+  total: number;
+};
 
 function App() {
   const [distancia, setDistancia] = useState(0);
   const [consumo, setConsumo] = useState(0);
   const [combustivel, setCombustivel] = useState(0);
   const [pedagio, setPedagio] = useState(0);
-  const [pedagioValor, setPedagioValor] = useState<number>();
+  const [pedagioValor, setPedagioValor] = useState(0);
   const [info, setInfo] = useState<InfoProps>();
+
+  function calcular(event: FormEvent) {
+    event.preventDefault();
+
+    let custoCombustivel = (distancia / consumo) * combustivel;
+    let custoPedagio = pedagio * pedagioValor;
+    let total = custoCombustivel + custoPedagio;
+
+    setInfo({
+      combustivel: custoCombustivel,
+      pedagio: custoPedagio,
+      total: total,
+    });
+  }
+
+  function formatarMoeda(valor: number) {
+    let valorFormatado = valor.toLocaleString('pt-br',
+      {
+        style: 'currency',
+        currency: 'BRL'
+      }
+    )
+
+    return valorFormatado
+  }
 
   return (
     <>
@@ -24,11 +47,11 @@ function App() {
         <img 
           className='logoImg'
           src={logoImg} 
-          alt="Logotipo de um carro no posto de combustível com um relógio em cima escrito TRAVEL CALCULATOR" 
+          alt='Logotipo de um carro no posto de combustível com um relógio em cima escrito TRAVEL CALCULATOR' 
         />
       </header>
       <main>
-        <form className='form'>
+        <form className='form' onSubmit={calcular}>
           <label>
             Distância (km):
             <input 
@@ -36,7 +59,7 @@ function App() {
               placeholder='100' 
               type='number' 
               min={0} 
-              step={1} 
+              step={0.01} 
               required 
               value={distancia}
               onChange={ (e) => setDistancia(Number(e.target.value)) }
@@ -49,7 +72,7 @@ function App() {
               placeholder='40' 
               type='number' 
               min={0} 
-              step={1} 
+              step={0.01}
               required 
               value={consumo} 
               onChange={ (e) => setConsumo(Number(e.target.value)) }
@@ -96,7 +119,18 @@ function App() {
               />
             </label>
           )}
+          <button type='submit'>
+            Calcular custo total
+          </button>
         </form>
+        {info && Object.keys(info).length > 0 && (
+          <section>
+            <h2>Resumo da Viagem</h2>
+            <span>Custo com combustível: {formatarMoeda(info.combustivel)}</span>
+            <span>Custo com pedágios: {formatarMoeda(info.pedagio)}</span>
+            <span>Custo total: {formatarMoeda(info.total)}</span>
+          </section>
+        )}
       </main>
     </>
   )
