@@ -53,8 +53,13 @@ A **Calculadora de Custos de Viagem** é uma aplicação React desenvolvida para
    ```bash
    http://localhost:5173
 
-📁 Estrutura do Projeto
+📄 Licença
+Este projeto está sob a licença MIT. Sinta-se à vontade para utilizá-lo e modificá-lo.
+Consulte o arquivo LICENSE para mais informações.
 
+💬 Feedback Ficou com alguma dúvida ou tem sugestões para melhorar este projeto? Entre em contato comigo ou abra uma issue no repositório. Toda contribuição é bem-vinda! 😊
+
+📁 Estrutura do Projeto
    ```scss
    calculadora-de-viagem/
    ├── public/
@@ -69,8 +74,3 @@ A **Calculadora de Custos de Viagem** é uma aplicação React desenvolvida para
    ├── package.json (configuração do projeto)
    └── README.md (documentação do projeto)
 
-📄 Licença
-Este projeto está sob a licença MIT. Sinta-se à vontade para utilizá-lo e modificá-lo.
-Consulte o arquivo LICENSE para mais informações.
-
-💬 Feedback Ficou com alguma dúvida ou tem sugestões para melhorar este projeto? Entre em contato comigo ou abra uma issue no repositório. Toda contribuição é bem-vinda! 😊
