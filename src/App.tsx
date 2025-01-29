@@ -10,11 +10,11 @@ interface InfoProps {
 };
 
 function App() {
-  const [distancia, setDistancia] = useState(0);
-  const [consumo, setConsumo] = useState(0);
-  const [combustivel, setCombustivel] = useState(0);
-  const [pedagio, setPedagio] = useState(0);
-  const [pedagioValor, setPedagioValor] = useState(0);
+  const [distancia, setDistancia] = useState<number>(0);
+  const [consumo, setConsumo] = useState<number>(0);
+  const [combustivel, setCombustivel] = useState<number>(0);
+  const [pedagio, setPedagio] = useState<number>(0);
+  const [pedagioValor, setPedagioValor] = useState<number>(0);
   const [info, setInfo] = useState<InfoProps>();
 
   function calcular(event: FormEvent) {
@@ -56,7 +56,7 @@ function App() {
             <input 
               className='input' 
               placeholder='100' 
-              type='number' 
+              type='number'
               min={0} 
               step={0.01} 
               required 
@@ -122,7 +122,7 @@ function App() {
             Calcular custo total
           </button>
         </form>
-        {info && Object.keys(info).length > 0 && (
+        {info?.total && (
           <section className='cardResultado'>
             <h2>Resumo da Viagem</h2>
             <span>Custo com combustível: {formatarMoeda(info.combustivel)}</span>
